@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {Link} from "react-router-dom";
 import "../../styles/navbar.scss";
+import NavLogo from "../../Assets/logo.png";
 
 const Navbar = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -12,7 +13,7 @@ const Navbar = () => {
     <div>
       <nav className="navigation">
         <a href="/" className="brand-name">
-          NGO-Connection
+          <img src={NavLogo} alt="navbar Logo" />
         </a>
         <button
           className="hamburger"
@@ -40,13 +41,10 @@ const Navbar = () => {
         >
           <ul>
             <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
               <Link to="/">About</Link>
             </li>
             <li>
-            <Link to="/">Contact</Link>
+              <Link to="/profile">Profile</Link>
             </li>
             <button className="white_btn" onClick={handleLogout}> Logout
             </button>
