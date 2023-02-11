@@ -9,6 +9,7 @@ const Signup = () => {
 		lastName: "",
 		email: "",
 		password: "",
+		phNumber:"",
 	});
 	const [error, setError] = useState("");
 	const navigate = useNavigate();
@@ -82,6 +83,15 @@ const Signup = () => {
 							name="password"
 							onChange={handleChange}
 							value={data.password}
+							required
+							className="input"
+						/>
+						<input
+							type="number"
+							placeholder="Phone Number"
+							name="phNumber"
+							onChange={handleChange}
+							value={data.phNumber}
 							required
 							className="input"
 						/>
