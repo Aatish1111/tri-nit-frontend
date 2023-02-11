@@ -38,7 +38,7 @@ const ProfileCreation = () => {
       <div className="profile-form-data">
         <div className="left">
           <form className="profile_data_after_signup">
-          <h1>Users Data</h1>
+          <h3>Users Profile Data</h3>
             <input
               type="text"
               placeholder="First Name"
@@ -66,10 +66,18 @@ const ProfileCreation = () => {
               required
               className="input"
             />
+            <input
+              type="number"
+              placeholder="Phone Number"
+              name="phNumber"
+              required
+              className="input"
+            />
           </form>
         </div>
         <div className="right">
           <form onSubmit={onSubmit} className="profile_form_container">
+          <h3>Want to involve in NGO Corporation</h3>
             <input
               type="text"
               name="name"
@@ -111,7 +119,7 @@ const ProfileCreation = () => {
               className="input"
             />
             <button type="submit" className="green_btn">
-              Create Profile
+              Create NGO Profile
             </button>
           </form>
         </div>
